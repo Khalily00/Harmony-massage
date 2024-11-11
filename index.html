@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony | Massage Therapy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Morganite:wght@400&family=Caviar+Dreams:wght@400&family=Zircon:wght@400&display=swap" rel="stylesheet">
+    <style>
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Caviar Dreams', sans-serif;
+            background-color: #e6e1d3;
+            color: #333;
+        }
+        button, input[type="submit"] {
+            font-family: 'Morganite', sans-serif;
+            padding: 10px 20px;
+            background-color: #d3c6b3;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            font-family: 'Zircon', sans-serif;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        /* Sidebar styling */
+        #sidebar {
+            position: fixed;
+            top: 20px;
+            left: 0;
+            width: 200px;
+            background-color: #d3c6b3;
+            padding: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        #sidebar button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        /* Menu button */
+        #menuButton {
+            position: fixed;
+            top: 20px;
+            left: 10px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Menu Button -->
+<div id="menuButton">&#9776;</div>
+
+<!-- Hero Section -->
+<section id="hero" class="section">
+    <h1>Experience Relaxation and Recovery at Home with Professional Massage Therapy</h1>
+    <p>Revitalize your body and mind with in-home massage therapy services tailored to your needs.</p>
+    <button onclick="document.getElementById('booking').scrollIntoView()">Book Your Session</button>
+</section>
+
+<!-- Booking Section -->
+<section id="booking" class="section">
+    <h2>Book a Session</h2>
+    <form action="https://formspree.io/f/mnnqvqlk" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="service">Service:</label>
+        <select id="service" name="service" required>
+            <option value="Deep Tissue Massage">Deep Tissue Massage</option>
+            <option value="Sports Massage">Sports Massage</option>
+            <option value="Relaxation Massage">Relaxation Massage</option>
+        </select>
+        
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <input type="submit" value="Submit Booking Request">
+    </form>
+</section>
+
+<!-- Feedback Section -->
+<section id="feedback" class="section">
+    <h2>Client Feedback</h2>
+    <form action="https://formspree.io/f/mnnqvqlk" method="POST">
+        <label for="feedback-name">Name:</label>
+        <input type="text" id="feedback-name" name="name" required>
+        
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Very Good</option>
+            <option value="3">3 - Good</option>
+            <option value="2">2 - Fair</option>
+            <option value="1">1 - Poor</option>
+        </select>
+        
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" required></textarea>
+        
+        <input type="submit" value="Submit Feedback">
+    </form>
+</section>
+
+<!-- Contact/Inquiry Section -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mnnqvqlk" method="POST">
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" name="name" required>
+        
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" name="email" required>
+        
+        <label for="contact-message">Message:</label>
+        <textarea id="contact-message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Send Message">
+    </form>
+</section>
+
+<!-- Social Media Section -->
+<section id="social" class="section">
+    <h2>Follow Us</h2>
+    <p>Stay connected through our social media:</p>
+    <a href="https://www.instagram.com/yourprofile" target="_blank">Instagram</a> |
+    <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
+  
+  </section>
+
+  <!-- WhatsApp Button -->
+<section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mnnqvqlk" method="POST">
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" name="name" required>
+        
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" name="email" required>
+        
+        <label for="contact-message">Message:</label>
+        <textarea id="contact-message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Send Message">
+    </form>
+    
+    <!-- WhatsApp Direct Contact Button -->
+    <button onclick="window.location.href='https://wa.me/971581091455'" style="background-color: #25D366; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 15px; cursor: pointer;">
+        Contact on WhatsApp
+    </button>
+</section>
+
+<!-- Sidebar Navigation -->
+<div id="sidebar">
+    <button onclick="document.getElementById('hero').scrollIntoView()">Home</button>
+    <button onclick="document.getElementById('booking').scrollIntoView()">Book a Session</button>
+    <button onclick="document.getElementById('feedback').scrollIntoView()">Feedback</button>
+    <button onclick="document.getElementById('contact').scrollIntoView()">Contact Us</button>
+</div>
+
+<script>
+    // Toggle sidebar display on menu button click
+    document.getElementById('menuButton').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.style.display = sidebar.style.display === 'none' || sidebar.style.display === '' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>
